@@ -1,0 +1,67 @@
+
+import { environment } from "src/environments/environment";
+
+export class Urls {
+    public static addincylinder=`${environment.cmsproject}/postincomingcylinder`
+    public static getcustomerdetailsbyid=`${environment.cmsproject}/getbycustomerid`
+    public static addtocustomer=`${environment.cmsproject}/postcustomer`
+    public static addtoproduction=`${environment.cmsproject}/postproduction`
+    public static getcustmaster=`${environment.cmsproject}/getcustomermaster`
+    public static postcylindermaster=`${environment.cmsproject}/postcylindermaster`
+    public static postcylindermasterlist=`${environment.cmsproject}/postlistofCylinders`
+    public static postdirecttoprod=`${environment.cmsproject}/postdirecttoproduction`
+    public static getcylindermaster=`${environment.cmsproject}/getcylindermaster`
+    public static getdetailsofcylinderlist=`${environment.cmsproject}/getlistofcylinderdetails`
+    public static getcylinderbybarcode=`${environment.cmsproject}/getbybarcode`
+    public static getcylinderbymanufacturedate=`${environment.cmsproject}/getbymanufacture`
+    public static getcylinderbyexpirydate=`${environment.cmsproject}/getbyexpirydate`
+    public static checkbarcodes=`${environment.cmsproject}/checkCustomerBarcodes`
+    public static checkproductionbarcods=`${environment.cmsproject}/checkinproduction`
+    public static checkincomingbarcodes=`${environment.cmsproject}/checkinincomingcylinder`
+    public static getbill=`${environment.cmsaccounts}/api/accounts/getbill`
+    public static getinvoice=`${environment.cmsaccounts}/getinvoice`
+    public static postintoinvoice=`${environment.cmsaccounts}/api/accounts/postinvoice`
+    public static deletebill=`${environment.cmsaccounts}/api/accounts/deletebill`
+    public static getincomingreceiptbybillnumber=`${environment.cmsaccounts}/api/accounts/getincomingreceiptbybillnumber`
+    public static getoutgoingbillbybillnumber=`${environment.cmsaccounts}/api/accounts/getbillbybillnumber`
+    public static incomingcylinderreportfortoday=`${environment.cmsproject}/gettodaystransactionforincoming`
+    public static incomingcylinderreportforrange=`${environment.cmsproject}/getincomingreportbydaterange`
+    public static productionreportfortoday=`${environment.cmsproject}/gettodaystransactionforproduction`
+    public static productionreportforrange=`${environment.cmsproject}/getproductionreportbydaterange`
+    public static outgoingreportfortoday=`${environment.cmsproject}/gettodaystransactionforoutgoing`
+    public static outgoingreportforrange=`${environment.cmsproject}/getoutgoingreportbydaterange`
+    public static downloadincomingexcelbydaterange=`${environment.cmsproject}/downloadincomingexcelreportbyrange`
+    public static downloadincomingpdfbydaterange=`${environment.cmsproject}/pdfdownload`
+    public static downloadoutgoingpdfbydaterange=`${environment.cmsproject}/pdfdownloadforoutgoing`
+    public static downloadproductionpdfbydaterange=`${environment.cmsproject}/pdfdownloadforproduction`
+    public static downloadtodaysinpdf=`${environment.cmsproject}/todaysinpdfdownload`
+    public static downloadtodaysprodpdf=`${environment.cmsproject}/todayspdfdownloadforproduction`
+    public static downloadtodaysoutpdf=`${environment.cmsproject}/todayspdfdownloadforoutgoing`
+    public static downloadoutgoingexcelbydaterange=`${environment.cmsproject}/downloadoutgoingexcelreportbyrange`
+    public static downloadproductionexcelbydaterange=`${environment.cmsproject}/downloadproductionexcelreportbyrange`
+    public static downloadtodaysproductionexcel=`${environment.cmsproject}/downloadproductionexcelreportfortoday`
+    public static downloadtodaysincomingexcel=`${environment.cmsproject}/downloadincomingexcelreportfortoday`
+    public static downloadtodaysoutgoingexcel=`${environment.cmsproject}/downloadoutgoingexcelreportfortoday`
+    public static downloadcylindermastersample=`${environment.cmsproject}/downloadcylindermastersample`
+    public static uploadcylindermasterexcel=`${environment.cmsproject}/uploadcylindermaster`
+    // public static downloadtodaysproductionpdf=`${environment.cmsproject}/downloadproductionexcelreportfortoday`
+    // public static downloadtodaysincomingpdf=`${environment.cmsproject}/downloadincomingexcelreportfortoday`
+    // public static downloadtodaysoutgoingpdf=`${environment.cmsproject}/downloadoutgoingexcelreportfortoday`
+    public static postlistofproducts=`${environment.cmsproject}/postlistofproducts`
+    public static getpurchaseorder=`${environment.cmsaccounts}/getpo`
+    public static postpurchaseorder=`${environment.cmsaccounts}/postpo`
+    public static getproducts=`${environment.cmsproject}/getproducts`
+    public static updateproductdetails=`${environment.cmsproject}/putproducts`
+    public static getpolistbyconditions=`${environment.cmsaccounts}/getpobyconditions`
+    public static getpurchaseorderbyid=`${environment.cmsaccounts}/getpobyid`
+    public static trackthecylinder=`${environment.cmsproject}/trackcylinder`
+    public static getappliedtax=`${environment.cmsacc}/getappliedtax`
+    public static postincomingreciept=`${environment.cmsacc}/postdirecttoincomingreceipt`
+    public static postaccountsbill=`${environment.cmsacc}/postbill`
+    public static postdirectbill=`${environment.cmsacc}/postdirecttooutgoingbill`
+    public static getbilllist=`${environment.cmsacc}/getbill`
+    public static getreceiptlist=`${environment.cmsacc}/getincomingreceipt`
+    public static getscannedbarcode=`${environment.cmsproject}/getbarcode`
+    public static postcustmaster=`${environment.cmsproject}/postcustomermaster`
+    public static getbarcodebycylnumber=`${environment.cmsproject}/getcylindernumber`
+}

@@ -1,0 +1,30 @@
+<mat-nav-list appAccordion > 
+  <mat-list-item  *ngFor="let menuitem of menuItems.getMenuitem()" routerLinkActive="selected" (click)="scrollToTop()">
+    
+    <a *ngIf="menuitem.type === 'link'" [routerLink]="['/', menuitem.state]" (click)="handleNotify($event)">
+      <span>{{ menuitem.name }}</span>
+      <p>but</p>
+      <span fxFlex></span>
+    </a>
+    
+    <!-- For submenu, use mat-expansion panel and toggle based on showMenu state -->
+    <mat-expansion-panel *ngIf="menuitem.type === 'sub'" [expanded]="showMenu === menuitem.state">
+      <mat-expansion-panel-header (click)="addExpandClass(menuitem.state)">
+        <mat-panel-title>
+          <span>{{ menuitem.name }}</span>
+        </mat-panel-title>
+        <mat-icon class="dd-icon">keyboard_arrow_down</mat-icon>
+      </mat-expansion-panel-header>
+
+      <!-- List of child items under this submenu -->
+      <mat-nav-list class="sub-item">
+        <mat-list-item *ngFor="let childitem of menuitem.children" routerLinkActive="selected">
+          <a [routerLink]="['/', menuitem.state, childitem.state]" *ngIf="childitem.type === 'link'" (click)="handleNotify($event)">
+            {{ childitem.name }}
+          </a>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-expansion-panel>
+    
+  </mat-list-item>
+</mat-nav-list>

@@ -1,0 +1,11 @@
+.m-l-20{
+    margin-left: 20px;
+}
+.cursor-disabled{
+    cursor: not-allowed;
+}
+.page-content {
+    overflow-y: auto;
+    max-width: 100vh;
+  }
+  

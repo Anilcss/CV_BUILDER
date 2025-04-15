@@ -1,0 +1,472 @@
+/*============================================================== 
+ For all pages 
+ ============================================================== */
+
+/*******************
+ Main container
+*******************/
+
+.page-breadcrumb {
+    background: $white;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .mat-drawer-container {
+    background: $bodycolor;
+  }
+  
+  html .page-wrapper {
+    height: calc(100vh - 64px);
+  
+    .page-content {
+      padding: 15px;
+    }
+  }
+  
+  /*******************
+   Login register new
+  *******************/
+  .login-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1150px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .login-container {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0 0 5px #999999;
+  }
+  
+  .login .col-left,
+  .login .col-right {
+    padding: 20px 30px;
+    // display: flex;
+  }
+  
+  .login .col-left {
+    width: 40%;
+    background: linear-gradient(#eaeaed, #616767);
+  
+    img {
+      margin-top: 30%;
+      width: 150px;
+      height: 55px;
+    }
+  
+    .title-text {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  
+  .login .col-right {
+    width: 60%;
+    // padding: 60px 30px;
+    // margin-left: -10%;
+  }
+  
+  .login .login-form {
+    position: relative;
+    width: 100%;
+  }
+  
+  @media(max-width: 575px) {
+    .login .login-container {
+      flex-direction: column;
+      box-shadow: none;
+    }
+  
+    .login .col-left,
+    .login .col-right {
+      width: 100%;
+      margin: 0;
+      clip-path: none;
+    }
+  
+    .login .col-left img {
+      margin: 5%;
+    }
+  
+    .login .col-right {
+      padding: 30px;
+    }
+  }
+  
+  /*******************
+   Login register
+  *******************/
+  .login-register {
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    align-items: center;
+  
+    .mat-card {
+      margin: 0px 15px;
+    }
+  
+    .mat-form-field {
+      width: 100%;
+    }
+  
+    .login-register-box {
+      max-width: 400px;
+      min-width: 280px;
+      margin: 0 auto;
+      vertical-align: middle;
+    }
+  
+    .support-text {
+      margin-top: -15px;
+      display: block;
+      padding-bottom: 15px;
+    }
+  }
+  
+  .user-profile-panel {
+    .mat-menu-content {
+      width: 200px;
+    }
+  }
+  
+  .error-card {
+    h1 {
+      font-size: 210px;
+      font-weight: 900;
+      line-height: 210px;
+      margin: 0px;
+      text-shadow: 4px 5px 1px #b3bbbf;
+    }
+  }
+  
+  .ngx-datatable.material {
+    box-shadow: none;
+    border: 1px solid $border;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .bottom-right {
+    position: absolute !important;
+    right: 40px;
+    bottom: 40px;
+    z-index: 10;
+  }
+  
+  /**********************
+   TABLE 
+  ***********************/
+  .table {
+    tr.mat-header-row {
+      height: 35px;
+    }
+  
+    .mat-header-cell {
+      text-align: left;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 10px 10px 10px 0;
+      height: fit-content;
+      padding-bottom: -0.0em;
+      padding-top: 0px;
+      white-space: normal;
+      word-wrap: break-word;
+    }
+  
+    .mat-row {
+      height: auto;
+    }
+  
+    .mat-cell {
+      text-align: left;
+      font-size: 13px;
+      padding: 10px 10px 10px 0;
+      white-space: normal;
+      word-wrap: break-word;
+      width: auto;
+    }
+  
+    .mat-row:nth-child(odd) {
+      background-color: #f5f5f5;
+    }
+  }
+  
+  
+  /*******************
+  Chartistt chart css
+  ******************/
+  .barchrt {
+    .ct-series-a .ct-bar {
+      stroke: $success;
+    }
+  
+    .ct-series-b .ct-bar {
+      stroke: $info;
+    }
+  }
+  
+  .linearea {
+    height: 280px;
+  
+    .ct-series-a .ct-area {
+      fill-opacity: 0.05;
+      fill: $success;
+    }
+  
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point {
+      stroke: $success;
+      stroke-width: 2px;
+    }
+  
+    .ct-series-b .ct-area {
+      fill: $info;
+      fill-opacity: 0.1;
+    }
+  
+    .ct-series-b .ct-line,
+    .ct-series-b .ct-point {
+      stroke: $info;
+      stroke-width: 2px;
+    }
+  
+    .ct-series-c .ct-area {
+      fill: $danger;
+      fill-opacity: 0.1;
+    }
+  
+    .ct-series-c .ct-line,
+    .ct-series-c .ct-point {
+      stroke: $danger;
+      stroke-width: 2px;
+    }
+  
+    .ct-series-a .ct-point,
+    .ct-series-b .ct-point,
+    .ct-series-c .ct-point {
+      stroke-width: 6px;
+    }
+  }
+  
+  .piechart {
+    .ct-series-a .ct-slice-donut {
+      stroke: $info;
+    }
+  
+    .ct-series-b .ct-slice-donut {
+      stroke: $success;
+    }
+  
+    .ct-series-c .ct-slice-donut {
+      stroke: $purple;
+    }
+  
+    .ct-series-d .ct-slice-donut {
+      stroke: $light;
+    }
+  
+    .ct-series-e .ct-slice-donut {
+      stroke: $warning;
+    }
+  }
+  
+  
+  /*******************
+  Chartis tooltip scss
+  ******************/
+  .chartist-tooltip {
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    min-width: 50px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #313131;
+    color: $white;
+    font-weight: 500;
+    text-align: center;
+    pointer-events: none;
+    z-index: 1;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+  }
+  
+  /*.chartist-tooltip:before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      margin-left: -5px;
+      border: 5px solid transparent;
+      border-top-color: #313131; }
+  */
+  .chartist-tooltip.tooltip-show {
+    opacity: 1;
+  }
+  
+  .ct-area,
+  .ct-line {
+    pointer-events: none;
+  }
+  
+  /*# sourceMappingURL=chartist-plugin-tooltip.css.map */
+  .no-wrap {
+  
+    td,
+    .ng-star-inserted {
+      white-space: nowrap;
+    }
+  }
+  
+  /*******************
+  Smart table
+  ******************/
+  .smart-table tr td,
+  .smart-table tr th {
+    padding: 15px !important;
+    text-align: left;
+  }
+  
+  .ng2-smart-action-add-add {
+    color: $white !important;
+    background: $themecolor;
+    padding: 8px 15px;
+    border-radius: $radius;
+    white-space: nowrap;
+  }
+  
+  .ng2-smart-pagination-nav {
+    margin-left: auto;
+  }
+  
+  .ng2-smart-pagination-nav .pagination>li>a {
+    line-height: 1rem;
+  }
+  
+  .ng2-smart-filter .form-control {
+    border: 1px solid $border;
+    border-radius: 0.25rem;
+    min-height: 38px;
+  }
+  
+  .form-control {
+    border: 1px solid $border;
+  }
+  
+  /**********************
+  Overall Responsive table
+  ***********************/
+  
+  .responsive-table {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  
+    .mat-cell:first-of-type,
+    .mat-footer-cell:first-of-type,
+    .mat-header-cell:first-of-type {
+      padding-left: 0;
+    }
+  
+    .header-label {
+      display: none;
+    }
+  
+    .mat-table {
+      overflow: auto;
+      max-height: 100%;
+    }
+  }
+  
+  .table-responsive {
+    overflow: auto;
+  }
+  
+  .pagination {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+  }
+  
+  .page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: $themecolor;
+    background-color: $white;
+    border: 1px solid $border;
+  }
+  
+  .page-link:hover {
+    z-index: 2;
+    color: $bodytext;
+    text-decoration: none;
+    background-color: $light;
+    border-color: $border;
+  }
+  
+  .page-link:focus {
+    z-index: 2;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .page-link:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+  
+  .page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+  
+  .page-item:last-child .page-link {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+  
+  .page-item.active .page-link {
+    z-index: 1;
+    color: $white;
+    background-color: $themecolor;
+    border-color: $themecolor;
+  }
+  
+  .page-item.disabled .page-link {
+    color: $muted;
+    pointer-events: none;
+    cursor: auto;
+    background-color: $white;
+    border-color: $border;
+  }

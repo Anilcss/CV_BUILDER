@@ -1,0 +1,58 @@
+<div class="main-container">
+  <mat-toolbar class="topbar relative">
+    <div class="w-100 fix-width-for-horizontal">
+      <div class="m-l-15 navbar-header">
+        <div class="navbar-brand">
+
+          <a href="/">
+            <img width="105" height="40"  class="light-logo" alt="homepage">
+          </a>
+        </div>
+      </div>
+
+      <button mat-icon-button (click)="snav.toggle()" class="sidebar-toggle" value="sidebarclosed">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span fxFlex></span>
+
+      <div>
+        <span class="font-14 m-r-10 font-normal">
+          {{username}}
+        </span>
+
+        <button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-5">
+          <img src="assets/images/default.png" alt="user" class="profile-pic light-logo">
+        </button>
+        <mat-menu #profile="matMenu" class="user-profile-panel">
+          <button mat-menu-item (click)="viewProfile()">
+            <mat-icon>account_box</mat-icon> Profile
+          </button>
+          <button mat-menu-item >
+            <mat-icon>exit_to_app</mat-icon> Sign Out
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+    <mat-sidenav #snav id="snav" class="pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0"
+      [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches" (open)="sidebarOpened = true"
+      (close)="sidebarOpened = false">
+      <perfect-scrollbar class="scbar" [config]="config">
+        <app-vertical-sidebar class="app-sidebar" [showClass]='status' (notify)="snav.toggle()">
+        </app-vertical-sidebar>
+      </perfect-scrollbar>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="page-wrapper">
+      <app-breadcrumb></app-breadcrumb>
+      <div class="page-content">
+        <router-outlet>
+          <app-spinner></app-spinner>
+        </router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

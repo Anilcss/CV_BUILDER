@@ -1,0 +1,34 @@
+<!-- ============================================================== -->
+<!-- sidebar -->
+<!-- ============================================================== -->
+<mat-nav-list appAccordion>
+  <mat-list-item appAccordionLink *ngFor="let menuitem of menuItems.getMenuitem()" routerLinkActive="selected"
+    (click)="scrollToTop()">
+
+    <a class="" appAccordionToggle [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'"
+      (click)="handleNotify($event)">
+   
+      <span>{{ menuitem.name }}</span>
+      
+      <span fxFlex></span>
+    </a>
+
+    <a class="" appAccordionToggle href="javascript:;" *ngIf="menuitem.type === 'sub'" (click)="addExpandClass(menuitem.state)">
+ 
+      <span>{{ menuitem.name }}</span>
+      <span fxFlex></span>
+      <mat-icon class="dd-icon">keyboard_arrow_down</mat-icon>
+    </a>
+
+    <mat-nav-list class="sub-item" *ngIf="menuitem.type === 'sub' && showMenu===menuitem.state">
+
+      <mat-list-item *ngFor="let childitem of menuitem.children; let j=index; let i = childitem"
+        routerLinkActive="selected">
+        <a [routerLink]="['/', menuitem.state, childitem.state ]" *ngIf="childitem.type === 'link'" class="relative"
+          routerLinkActive="selected" (click)="itemSelect[i]=j" (click)="handleNotify($event)">{{ childitem.name |
+          translate}}</a>
+      </mat-list-item>
+
+    </mat-nav-list>
+  </mat-list-item>
+</mat-nav-list>

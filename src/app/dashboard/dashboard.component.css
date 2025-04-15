@@ -1,0 +1,12 @@
+.graphcard{
+    width: 30%;height: 300px;
+   
+    border-radius: 30px;
+    background-color:rgba(210, 210, 229, 0.33);
+}
+.graphcardbar{
+   width: 90%;
+   
+    border-radius: 30px;
+    background-color:rgba(210, 210, 229, 0.33);
+}
